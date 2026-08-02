@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://k1immi47n6e0"]
+
+[ext_resource type="Script" uid="uid://w4njmmckodw4" path="res://scripts/battle.gd" id="1_dn72j"]
+
+[node name="Node2D" type="Node2D" unique_id=1758544747]
+script = ExtResource("1_dn72j")
+
+[node name="DrawButton" type="Button" parent="." unique_id=401791520]
+offset_left = 100.0
+offset_top = 600.0
+offset_right = 300.0
+offset_bottom = 700.0
+theme_override_font_sizes/font_size = 50
+text = "Draw"
+
+[node name="DrawPile" type="Label" parent="." unique_id=669125653]
+offset_left = 20.0
+offset_top = 1000.0
+offset_right = 100.0
+offset_bottom = 1060.0
+theme_override_font_sizes/font_size = 40
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DiscardPile" type="Label" parent="." unique_id=906632228]
+offset_left = 1820.0
+offset_top = 1000.0
+offset_right = 1900.0
+offset_bottom = 1060.0
+theme_override_font_sizes/font_size = 40
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="button_up" from="DrawButton" to="." method="_draw_card"]
